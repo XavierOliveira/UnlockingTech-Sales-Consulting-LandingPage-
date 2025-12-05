@@ -1039,7 +1039,7 @@ const App = () => {
             <a href="#solucoes" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Soluções</a>
             <a href="#equipa" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Equipa</a>
             <div className="scale-90 origin-right">
-              <MetallicButton href="https://www.unlockingtech.com/contact-us">Fale Conosco</MetallicButton>
+              <MetallicButton href="https://www.unlockingtech.com/contact-us">Fale Connosco</MetallicButton>
             </div>
           </div>
         </div>
