@@ -79,7 +79,7 @@ const MetallicButton = ({
 
   const content = (
     <motion.span animate={controls} className="block w-full h-full relative rounded-full">
-      <span className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#ffffff_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+      <span className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#003099_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
       <span className="absolute inset-0 rounded-full bg-zinc-800 transition-opacity duration-300 group-hover:opacity-0"></span>
       <span className="flex items-center justify-center gap-2 uppercase transition-colors duration-300 text-zinc-200 group-hover:text-white text-xs md:text-sm font-medium tracking-widest bg-gradient-to-b from-zinc-800 to-zinc-950 w-full h-full rounded-full px-6 py-3 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
         <span className="relative z-10 flex items-center gap-2">
@@ -182,7 +182,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
-          <MetallicButton href="https://www.unlockingtech.com/contact-us">
+          <MetallicButton href="https://meetings-eu1.hubspot.com/miguel-marques?uuid=1fc2b9c6-f251-49b4-b6a5-fa9c1618af27">
             Agendar consulta gratuita
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
           </MetallicButton>
@@ -619,7 +619,7 @@ const MidSection = () => {
                 <p className="text-xl text-zinc-400 mb-10 max-w-lg leading-relaxed">
                   A forma mais inteligente de implementar, comprar, integrar e escalar os teus sistemas comerciais.
                 </p>
-                <MetallicButton href="https://www.unlockingtech.com/contact-us">Começar Agora</MetallicButton>
+                <MetallicButton href="https://meetings-eu1.hubspot.com/miguel-marques?uuid=1fc2b9c6-f251-49b4-b6a5-fa9c1618af27">Começar Agora</MetallicButton>
             </motion.div>
 
             {/* Right Column: Graphics */}
@@ -893,7 +893,7 @@ const Footer = () => {
               </p>
               
               <div className="flex flex-col items-center gap-8">
-                <MetallicButton href="https://www.unlockingtech.com/contact-us">
+                <MetallicButton href="https://meetings-eu1.hubspot.com/miguel-marques?uuid=1fc2b9c6-f251-49b4-b6a5-fa9c1618af27">
                   AGENDAR AGORA
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </MetallicButton>
@@ -1047,7 +1047,7 @@ const App = () => {
             <a href="#solucoes" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Soluções</a>
             <a href="#equipa" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Equipa</a>
             <div className="scale-90 origin-right">
-              <MetallicButton href="https://www.unlockingtech.com/contact-us">Fale Connosco</MetallicButton>
+              <MetallicButton href="https://meetings-eu1.hubspot.com/miguel-marques?uuid=1fc2b9c6-f251-49b4-b6a5-fa9c1618af27">Fale Connosco</MetallicButton>
             </div>
           </div>
         </div>
