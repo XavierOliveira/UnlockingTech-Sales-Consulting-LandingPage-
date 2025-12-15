@@ -807,38 +807,45 @@ const Team = () => {
    const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Transformamos processos complexos em sistemas simples que escalam, eliminando fricção e multiplicando resultados através da tecnologia certa.",
+      name: "Miguel Marques",
+      designation: "CEO & Estrategista de Vendas",
+      src: "https://cdn.prod.website-files.com/6478bc682b0c0435582bea36/693fe59639d9a13bbaa0b87d_MiguelMarques.avif",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Criamos integrações e automações que funcionam silenciosamente em segundo plano, assegurando que a tecnologia trabalha por ti e não contra ti.",
+      name: "Francisco Santos",
+      designation: "Engenheiro de IA",
+      src: "https://cdn.prod.website-files.com/6478bc682b0c0435582bea36/693fe5961b7f8575579d28d9_FranciscoSantos.avif",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "O especialista que vai garantir que a tua equipa domina cada ferramenta através de formação prática e suporte contínuo.",
+      name: "[Em Breve]",
+      designation: "Sales Specialist",
+      src: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Conectamos marketing e vendas através de automação inteligente, garantindo que cada lead tem uma jornada personalizada e sem atritos até ao fecho.",
+      name: "Xavier Oliveira",
+      designation: "Marketing Specialist",
+      src: "https://cdn.prod.website-files.com/6478bc682b0c0435582bea36/693fe59613aa0b4d80b611f6_Xavier%20Oliveira.avif",
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Garanto implementações rápidas e sem surpresas, entregando cada projeto com prazos claros, comunicação constante e resultados que podes medir.",
+      name: "Cristiana Silva",
+      designation: "Project Manager",
+      src: "https://cdn.prod.website-files.com/6478bc682b0c0435582bea36/693fe596a874efc5bd273886_Cristiana_Silva.avif",
+    },
+    {
+      quote:
+        "O design não é apenas visual, é sobre remover todas as barreiras entre o cliente e a conversão, apostando numa simplicidade que realmente converte.",
+      name: "Leandro Reis",
+      designation: "Designer de Experiência",
+      src: "https://cdn.prod.website-files.com/6478bc682b0c0435582bea36/693fe5962b9ee35a6ab108c2_Leandro_Reis.avif",
     },
   ];
 
