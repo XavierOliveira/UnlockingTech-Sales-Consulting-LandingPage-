@@ -56,48 +56,127 @@ interface MetallicButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   rel?: string;
 }
 
-const MetallicButton = ({ 
-  children, 
-  className, 
+const MetallicButton = ({
+  children,
+  className,
   onClick,
   href,
   ...props
 }: MetallicButtonProps) => {
-  const controls = useAnimation();
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      controls.start({
-        scale: [1, 1.05, 1],
-        transition: { duration: 0.4, ease: "easeInOut" }
-      });
-    }, 10000); // 10 seconds
-
-    return () => clearInterval(interval);
-  }, [controls]);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   const baseStyles = cn(
-    "group inline-flex overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] rounded-full p-[1px] relative items-center justify-center cursor-pointer", 
+    "group relative inline-flex items-center justify-center cursor-pointer z-10",
     className
   );
 
   const content = (
-    <motion.span animate={controls} className="block w-full h-full relative rounded-full">
-      <span className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#003099_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-      <span className="absolute inset-0 rounded-full bg-zinc-800 transition-opacity duration-300 group-hover:opacity-0"></span>
-      <span className="flex items-center justify-center gap-2 uppercase transition-colors duration-300 text-zinc-200 group-hover:text-white text-xs md:text-sm font-medium tracking-widest bg-gradient-to-b from-zinc-800 to-zinc-950 w-full h-full rounded-full px-6 py-3 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
-        <span className="relative z-10 flex items-center gap-2">
-          {children}
-        </span>
-      </span>
-    </motion.span>
+    <div
+      className="relative w-fit h-fit flex items-center justify-center"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Outer Glow */}
+      <div className="absolute inset-0 -m-[30px] rounded-xl pointer-events-none z-0 overflow-hidden opacity-50">
+        <motion.div
+          className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
+          style={{
+            background: 'conic-gradient(from 60deg at 50% 50%, transparent 0deg, #003099 15deg, transparent 145deg, transparent 180deg, #025AF8 215deg, transparent 325deg)',
+            filter: 'blur(32px)'
+          }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: isHovered ? 1.5 : 4,
+            ease: "linear",
+            repeat: Infinity
+          }}
+        />
+      </div>
+
+      {/* Dark Layer */}
+      <div className="absolute inset-0 -m-[8px] rounded-xl pointer-events-none z-[1] overflow-hidden">
+        <motion.div
+          className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
+          style={{
+            background: 'conic-gradient(from 82deg at 50% 50%, transparent 0deg, #001f66 25deg, transparent 75deg, transparent 180deg, #013d99 205deg, transparent 255deg)',
+            filter: 'blur(2.5px)'
+          }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: isHovered ? 1.5 : 4,
+            ease: "linear",
+            repeat: Infinity
+          }}
+        />
+      </div>
+
+      {/* Bright Layer */}
+      <div className="absolute inset-0 -m-[6px] rounded-xl pointer-events-none z-[2] overflow-hidden">
+        <motion.div
+          className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
+          style={{
+            background: 'conic-gradient(from 83deg at 50% 50%, transparent 0deg, #4985E1 20deg, transparent 60deg, transparent 180deg, #6BA3FF 200deg, transparent 240deg)',
+            filter: 'blur(1.8px) brightness(1.4)'
+          }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: isHovered ? 1.5 : 4,
+            ease: "linear",
+            repeat: Infinity
+          }}
+        />
+      </div>
+
+      {/* Primary Border */}
+      <div className="absolute inset-0 -m-[3px] rounded-xl pointer-events-none z-[3] overflow-hidden">
+        <motion.div
+          className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
+          style={{
+            background: 'conic-gradient(from 70deg at 50% 50%, transparent 0deg, #025AF8 20deg, transparent 80deg, transparent 180deg, #4985E1 210deg, transparent 270deg)',
+            filter: 'blur(0.4px) brightness(1.5)'
+          }}
+          animate={{ rotate: 360 }}
+          transition={{
+            duration: isHovered ? 1.5 : 4,
+            ease: "linear",
+            repeat: Infinity,
+            delay: 0.15
+          }}
+        />
+      </div>
+
+      {/* Blue Hint */}
+      <div
+        className="absolute w-10 h-8 top-2 left-5 z-[4] pointer-events-none transition-opacity duration-400"
+        style={{
+          background: 'radial-gradient(circle, #025AF8 0%, transparent 70%)',
+          filter: 'blur(18px)',
+          opacity: isHovered ? 0.3 : 0.6
+        }}
+      />
+
+      {/* Button Content */}
+      <motion.span
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-xs md:text-sm font-semibold tracking-widest rounded-xl px-6 py-3 md:px-10 md:py-[18px]"
+        style={{
+          background: 'linear-gradient(135deg, #010201 0%, #0a0509 100%)'
+        }}
+        whileHover={{
+          scale: 1.02,
+          boxShadow: '0 0 30px rgba(2, 90, 248, 0.3)'
+        }}
+        whileTap={{ scale: 0.98 }}
+      >
+        {children}
+      </motion.span>
+    </div>
   );
 
   if (href) {
     return (
-      <a 
-        href={href} 
-        className={baseStyles} 
+      <a
+        href={href}
+        className={baseStyles}
         {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {content}
@@ -106,7 +185,7 @@ const MetallicButton = ({
   }
 
   return (
-    <button 
+    <button
       onClick={onClick}
       className={baseStyles}
       {...props}
