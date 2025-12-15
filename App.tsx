@@ -76,23 +76,6 @@ const MetallicButton = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Outer Glow */}
-      <div className="absolute inset-0 -m-[30px] rounded-[12px] pointer-events-none z-0 overflow-hidden opacity-60">
-        <motion.div
-          className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
-          style={{
-            background: 'conic-gradient(from 60deg at 50% 50%, transparent 0deg, #003099 15deg, transparent 145deg, transparent 180deg, #025AF8 215deg, transparent 325deg)',
-            filter: 'blur(32px)'
-          }}
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: isHovered ? 2.5 : 4,
-            ease: "linear",
-            repeat: Infinity
-          }}
-        />
-      </div>
-
       {/* Dark Layer */}
       <div className="absolute inset-0 -m-[7px] rounded-[12px] pointer-events-none z-[1] overflow-hidden">
         <motion.div
