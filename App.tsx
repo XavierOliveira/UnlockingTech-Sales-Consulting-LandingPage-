@@ -38,7 +38,10 @@ import {
   Twitter,
   Mail,
   Phone,
-  Brain
+  Brain,
+  FileSpreadsheet,
+  CheckSquare,
+  Network
 } from 'lucide-react';
 import { motion, useInView, animate, useAnimation } from 'framer-motion';
 import { AnimatedTestimonials } from './components/ui/AnimatedTestimonials';
@@ -282,7 +285,7 @@ const Features = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
-            <span className="text-[#003099]">
+            <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">
               Com Tecnologia
             </span>
           </h2>
@@ -345,7 +348,71 @@ const Features = () => {
                </div>
             }
           />
-          <FeatureCard 
+          <FeatureCard
+            icon={Brain}
+            title={<>Decisões com <br/> base em AI</>}
+            desc="Insights inteligentes para decisões mais rápidas e precisas."
+            delay={3}
+            iconAnimation={{ scale: [1, 1.1, 1], opacity: [1, 0.8, 1], transition: { duration: 2.5, repeat: Infinity } }}
+            decoration={
+               <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+                  {/* Neural network nodes */}
+                  <svg className="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity" viewBox="0 0 200 200">
+                    <motion.circle
+                      cx="30" cy="30" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    />
+                    <motion.circle
+                      cx="170" cy="30" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+                    />
+                    <motion.circle
+                      cx="100" cy="100" r="6" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+                    />
+                    <motion.circle
+                      cx="30" cy="170" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    />
+                    <motion.circle
+                      cx="170" cy="170" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.8 }}
+                    />
+                    {/* Connecting lines */}
+                    <motion.line
+                      x1="30" y1="30" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                    <motion.line
+                      x1="170" y1="30" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                    />
+                    <motion.line
+                      x1="30" y1="170" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    />
+                    <motion.line
+                      x1="170" y1="170" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+                    />
+                  </svg>
+               </div>
+            }
+          />
+          <FeatureCard
             icon={BarChart3}
             title={<>Relatórios <br/> Automáticos</>}
             desc="Partilha métricas e insights com um clique."
@@ -589,70 +656,6 @@ const Features = () => {
                </div>
             }
           />
-          <FeatureCard
-            icon={Brain}
-            title={<>Decisões com <br/> base em AI</>}
-            desc="Insights inteligentes para decisões mais rápidas e precisas."
-            delay={11}
-            iconAnimation={{ scale: [1, 1.1, 1], opacity: [1, 0.8, 1], transition: { duration: 2.5, repeat: Infinity } }}
-            decoration={
-               <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
-                  {/* Neural network nodes */}
-                  <svg className="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity" viewBox="0 0 200 200">
-                    <motion.circle
-                      cx="30" cy="30" r="4" fill="#003099"
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0 }}
-                    />
-                    <motion.circle
-                      cx="170" cy="30" r="4" fill="#003099"
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
-                    />
-                    <motion.circle
-                      cx="100" cy="100" r="6" fill="#003099"
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
-                    />
-                    <motion.circle
-                      cx="30" cy="170" r="4" fill="#003099"
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                    />
-                    <motion.circle
-                      cx="170" cy="170" r="4" fill="#003099"
-                      animate={{ opacity: [0.3, 1, 0.3] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.8 }}
-                    />
-                    {/* Connecting lines */}
-                    <motion.line
-                      x1="30" y1="30" x2="100" y2="100"
-                      stroke="#003099" strokeWidth="1"
-                      animate={{ opacity: [0.2, 0.6, 0.2] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <motion.line
-                      x1="170" y1="30" x2="100" y2="100"
-                      stroke="#003099" strokeWidth="1"
-                      animate={{ opacity: [0.2, 0.6, 0.2] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    />
-                    <motion.line
-                      x1="30" y1="170" x2="100" y2="100"
-                      stroke="#003099" strokeWidth="1"
-                      animate={{ opacity: [0.2, 0.6, 0.2] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
-                    />
-                    <motion.line
-                      x1="170" y1="170" x2="100" y2="100"
-                      stroke="#003099" strokeWidth="1"
-                      animate={{ opacity: [0.2, 0.6, 0.2] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
-                    />
-                  </svg>
-               </div>
-            }
-          />
         </div>
       </div>
     </section>
@@ -675,7 +678,7 @@ const MidSection = () => {
             >
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
-                  <span className="text-[#003099]">
+                  <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">
                     As Tuas Necessidades
                   </span>
                 </h2>
@@ -701,11 +704,11 @@ const MidSection = () => {
                  
                  <div className="relative mx-auto mt-4 w-full">
                    <div className="flex items-center justify-center gap-3 sm:gap-6 flex-wrap z-10 relative">
-                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Github className="h-6 w-6 text-zinc-400" /></div>
-                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Slack className="h-6 w-6 text-zinc-400" /></div>
-                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Trello className="h-6 w-6 text-zinc-400" /></div>
-                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Figma className="h-6 w-6 text-zinc-400" /></div>
+                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><FileSpreadsheet className="h-6 w-6 text-zinc-400" /></div>
                      <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Database className="h-6 w-6 text-zinc-400" /></div>
+                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><CheckSquare className="h-6 w-6 text-zinc-400" /></div>
+                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Network className="h-6 w-6 text-zinc-400" /></div>
+                     <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Workflow className="h-6 w-6 text-zinc-400" /></div>
                      <div className="h-12 w-12 flex items-center justify-center rounded-xl bg-zinc-900 shadow-sm ring-1 ring-zinc-800 hover:scale-105 transition-transform"><Cloud className="h-6 w-6 text-zinc-400" /></div>
                    </div>
 
@@ -815,6 +818,12 @@ const Solutions = () => {
       title: "Integrações & Automação",
       text: "Ligamos as melhores ferramentas do mercado num ecossistema unificado. Automatizamos tarefas repetitivas para maximizar a produtividade da equipa.",
       icon: Workflow
+    },
+    {
+      id: "05",
+      title: "Relatórios e KPIs",
+      text: "Implementamos dashboards inteligentes para teres acesso a métricas em tempo real, previsões de vendas e análises de performance que mantêm a tua equipa focada no que realmente move o negócio.",
+      icon: Activity
     }
   ];
 
@@ -830,7 +839,7 @@ const Solutions = () => {
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-             As Nossas <span className="text-[#003099]">Soluções</span>
+             As Nossas <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Soluções</span>
           </h2>
           <p className="text-zinc-400 mt-4 text-lg">Soluções completas para transformar o teu negócio.</p>
         </motion.div>
@@ -924,7 +933,7 @@ const Team = () => {
           className="text-center mb-10"
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            A Nossa <span className="text-[#003099]">Equipa</span>
+            A Nossa <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Equipa</span>
           </h2>
           <p className="text-zinc-400">Especialistas em transformação digital de vendas.</p>
         </motion.div>
@@ -949,7 +958,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Pronto Para <span className="text-[#003099]">Crescer?</span>
+                Pronto Para <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Crescer?</span>
               </h2>
               <p className="text-zinc-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Agenda uma consultoria gratuita de 30 minutos e descobre o potencial da tua empresa.
