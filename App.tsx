@@ -37,7 +37,8 @@ import {
   Youtube,
   Twitter,
   Mail,
-  Phone
+  Phone,
+  Brain
 } from 'lucide-react';
 import { motion, useInView, animate, useAnimation } from 'framer-motion';
 import { AnimatedTestimonials } from './components/ui/AnimatedTestimonials';
@@ -281,7 +282,7 @@ const Features = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 animate-shimmer bg-[length:200%_100%]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">
               Com Tecnologia
             </span>
           </h2>
@@ -571,7 +572,7 @@ const Features = () => {
               </div>
             }
           />
-          <FeatureCard 
+          <FeatureCard
             icon={Search}
             title="Pesquisa Smart"
             desc="Encontra facilmente contactos e histórico."
@@ -579,7 +580,7 @@ const Features = () => {
             iconAnimation={{ x: [-2, 2, -2], y: [-2, 2, -2], transition: { duration: 3, repeat: Infinity } }}
             decoration={
                <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
-                  <motion.div 
+                  <motion.div
                     className="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-400 to-transparent opacity-50"
                     animate={{ top: ["0%", "100%", "0%"] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
@@ -587,6 +588,70 @@ const Features = () => {
                   <div className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
                     <Scan className="w-12 h-12 text-zinc-500" />
                   </div>
+               </div>
+            }
+          />
+          <FeatureCard
+            icon={Brain}
+            title={<>Decisões com <br/> base em AI</>}
+            desc="Insights inteligentes para decisões mais rápidas e precisas."
+            delay={11}
+            iconAnimation={{ scale: [1, 1.1, 1], opacity: [1, 0.8, 1], transition: { duration: 2.5, repeat: Infinity } }}
+            decoration={
+               <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+                  {/* Neural network nodes */}
+                  <svg className="absolute inset-0 w-full h-full opacity-10 group-hover:opacity-20 transition-opacity" viewBox="0 0 200 200">
+                    <motion.circle
+                      cx="30" cy="30" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                    />
+                    <motion.circle
+                      cx="170" cy="30" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+                    />
+                    <motion.circle
+                      cx="100" cy="100" r="6" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+                    />
+                    <motion.circle
+                      cx="30" cy="170" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    />
+                    <motion.circle
+                      cx="170" cy="170" r="4" fill="#003099"
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.8 }}
+                    />
+                    {/* Connecting lines */}
+                    <motion.line
+                      x1="30" y1="30" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                    <motion.line
+                      x1="170" y1="30" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                    />
+                    <motion.line
+                      x1="30" y1="170" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
+                    />
+                    <motion.line
+                      x1="170" y1="170" x2="100" y2="100"
+                      stroke="#003099" strokeWidth="1"
+                      animate={{ opacity: [0.2, 0.6, 0.2] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
+                    />
+                  </svg>
                </div>
             }
           />
@@ -612,7 +677,7 @@ const MidSection = () => {
             >
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 animate-shimmer bg-[length:200%_100%]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">
                     As Tuas Necessidades
                   </span>
                 </h2>
@@ -767,7 +832,7 @@ const Solutions = () => {
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-             As Nossas <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 animate-shimmer bg-[length:200%_100%]">Soluções</span>
+             As Nossas <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Soluções</span>
           </h2>
           <p className="text-zinc-400 mt-4 text-lg">Soluções completas para transformar o teu negócio.</p>
         </motion.div>
@@ -861,7 +926,7 @@ const Team = () => {
           className="text-center mb-10"
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            A Nossa <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 animate-shimmer bg-[length:200%_100%]">Equipa</span>
+            A Nossa <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Equipa</span>
           </h2>
           <p className="text-zinc-400">Especialistas em transformação digital de vendas.</p>
         </motion.div>
@@ -886,7 +951,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Pronto Para <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 animate-shimmer bg-[length:200%_100%]">Crescer?</span>
+                Pronto Para <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Crescer?</span>
               </h2>
               <p className="text-zinc-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Agenda uma consultoria gratuita de 30 minutos e descobre o potencial da tua empresa.
