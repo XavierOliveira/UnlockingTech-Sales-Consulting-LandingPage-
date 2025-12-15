@@ -77,7 +77,7 @@ const MetallicButton = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Outer Glow */}
-      <div className="absolute inset-0 -m-[30px] rounded-[14px] pointer-events-none z-0 overflow-hidden opacity-50">
+      <div className="absolute inset-0 -m-[30px] rounded-[12px] pointer-events-none z-0 overflow-hidden opacity-60">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -94,7 +94,7 @@ const MetallicButton = ({
       </div>
 
       {/* Dark Layer */}
-      <div className="absolute inset-0 -m-[8px] rounded-[14px] pointer-events-none z-[1] overflow-hidden">
+      <div className="absolute inset-0 -m-[7px] rounded-[12px] pointer-events-none z-[1] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -111,12 +111,12 @@ const MetallicButton = ({
       </div>
 
       {/* Bright Layer */}
-      <div className="absolute inset-0 -m-[6px] rounded-[14px] pointer-events-none z-[2] overflow-hidden">
+      <div className="absolute inset-0 -m-[4px] rounded-[12px] pointer-events-none z-[2] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
             background: 'conic-gradient(from 83deg at 50% 50%, transparent 0deg, #4985E1 20deg, transparent 60deg, transparent 180deg, #6BA3FF 200deg, transparent 240deg)',
-            filter: 'blur(1.8px) brightness(1.4)'
+            filter: 'blur(1.8px) brightness(1.6)'
           }}
           animate={{ rotate: 360 }}
           transition={{
@@ -128,11 +128,11 @@ const MetallicButton = ({
       </div>
 
       {/* Primary Border */}
-      <div className="absolute inset-0 -m-[3px] rounded-[14px] pointer-events-none z-[3] overflow-hidden">
+      <div className="absolute inset-0 -m-[2px] rounded-[12px] pointer-events-none z-[3] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
-            background: 'conic-gradient(from 70deg at 50% 50%, transparent 0deg, #025AF8 20deg, transparent 80deg, transparent 180deg, #4985E1 210deg, transparent 270deg)',
+            background: 'conic-gradient(from 70deg at 50% 50%, transparent 0deg, #025AF8 20deg, transparent 80deg, transparent 180deg, #025AF8 210deg, transparent 270deg)',
             filter: 'blur(0.4px) brightness(1.5)'
           }}
           animate={{ rotate: 360 }}
@@ -147,24 +147,32 @@ const MetallicButton = ({
 
       {/* Blue Hint */}
       <div
-        className="absolute w-10 h-[30px] top-[10px] left-5 z-[4] pointer-events-none transition-opacity duration-400"
+        className="absolute w-[30px] h-[20px] top-[18px] left-5 z-[4] pointer-events-none transition-opacity duration-400"
         style={{
           background: 'radial-gradient(circle, #025AF8 0%, transparent 70%)',
           filter: 'blur(18px)',
-          opacity: isHovered ? 0.3 : 0.6
+          opacity: isHovered ? 0 : 0.75
+        }}
+      />
+
+      {/* Gradient Mask */}
+      <div
+        className="absolute w-24 h-[18px] top-5 left-5 z-[4] pointer-events-none transition-opacity duration-300"
+        style={{
+          background: 'linear-gradient(to right, transparent 0%, #010201 100%)'
         }}
       />
 
       {/* Button Content */}
       <motion.span
-        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-xl px-10 py-[18px]"
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-[10px] px-10 py-[18px]"
         style={{
-          background: 'transparent',
+          background: 'linear-gradient(135deg, #010201 0%, #0a0509 100%)',
           border: 'none'
         }}
         whileHover={{
           scale: 1.02,
-          boxShadow: '0 0 30px rgba(2, 90, 248, 0.3)'
+          boxShadow: '0 0 20px rgba(2, 90, 248, 0.2)'
         }}
         whileTap={{ scale: 0.98 }}
       >
