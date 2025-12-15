@@ -356,7 +356,7 @@ const Features = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
-            <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">
+            <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">
               Com Tecnologia
             </span>
           </h2>
@@ -749,7 +749,7 @@ const MidSection = () => {
             >
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
-                  <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">
+                  <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">
                     As Tuas Necessidades
                   </span>
                 </h2>
@@ -910,7 +910,7 @@ const Solutions = () => {
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-             As Nossas <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Soluções</span>
+             As Nossas <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Soluções</span>
           </h2>
           <p className="text-zinc-400 mt-4 text-lg">Soluções completas para transformar o teu negócio.</p>
         </motion.div>
@@ -1004,7 +1004,7 @@ const Team = () => {
           className="text-center mb-10"
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            A Nossa <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Equipa</span>
+            A Nossa <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Equipa</span>
           </h2>
           <p className="text-zinc-400">Especialistas em transformação digital de vendas.</p>
         </motion.div>
@@ -1029,7 +1029,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Pronto Para <span className="text-[#003099] drop-shadow-[0_0_15px_rgba(0,48,153,0.5)]">Crescer?</span>
+                Pronto Para <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Crescer?</span>
               </h2>
               <p className="text-zinc-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Agenda uma consultoria gratuita de 30 minutos e descobre o potencial da tua empresa.
