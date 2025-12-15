@@ -77,7 +77,7 @@ const MetallicButton = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Outer Glow */}
-      <div className="absolute inset-0 -m-[30px] rounded-xl pointer-events-none z-0 overflow-hidden opacity-50">
+      <div className="absolute inset-0 -m-[30px] rounded-[10px] pointer-events-none z-0 overflow-hidden opacity-40">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -94,7 +94,7 @@ const MetallicButton = ({
       </div>
 
       {/* Dark Layer */}
-      <div className="absolute inset-0 -m-[8px] rounded-xl pointer-events-none z-[1] overflow-hidden">
+      <div className="absolute inset-0 -m-[8px] rounded-[10px] pointer-events-none z-[1] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -111,7 +111,7 @@ const MetallicButton = ({
       </div>
 
       {/* Bright Layer */}
-      <div className="absolute inset-0 -m-[6px] rounded-xl pointer-events-none z-[2] overflow-hidden">
+      <div className="absolute inset-0 -m-[6px] rounded-[10px] pointer-events-none z-[2] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -128,7 +128,7 @@ const MetallicButton = ({
       </div>
 
       {/* Primary Border */}
-      <div className="absolute inset-0 -m-[3px] rounded-xl pointer-events-none z-[3] overflow-hidden">
+      <div className="absolute inset-0 -m-[2px] rounded-[10px] pointer-events-none z-[3] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -151,19 +151,19 @@ const MetallicButton = ({
         style={{
           background: 'radial-gradient(circle, #025AF8 0%, transparent 70%)',
           filter: 'blur(18px)',
-          opacity: isHovered ? 0.3 : 0.6
+          opacity: isHovered ? 0.2 : 0.5
         }}
       />
 
       {/* Button Content */}
       <motion.span
-        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-xs md:text-sm font-semibold tracking-widest rounded-xl px-6 py-3 md:px-10 md:py-[18px]"
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-xs md:text-sm font-semibold tracking-wider rounded-lg px-6 py-3 md:px-10 md:py-[18px] border"
         style={{
-          background: 'linear-gradient(135deg, #010201 0%, #0a0509 100%)'
+          background: 'transparent',
+          borderColor: isHovered ? 'rgba(2, 90, 248, 0.6)' : 'rgba(2, 90, 248, 0.4)'
         }}
         whileHover={{
-          scale: 1.02,
-          boxShadow: '0 0 30px rgba(2, 90, 248, 0.3)'
+          scale: 1.02
         }}
         whileTap={{ scale: 0.98 }}
       >
