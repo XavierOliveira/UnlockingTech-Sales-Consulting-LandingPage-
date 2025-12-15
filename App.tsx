@@ -77,7 +77,7 @@ const MetallicButton = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Outer Glow */}
-      <div className="absolute inset-0 -m-[30px] rounded-[10px] pointer-events-none z-0 overflow-hidden opacity-40">
+      <div className="absolute inset-0 -m-[30px] rounded-[14px] pointer-events-none z-0 overflow-hidden opacity-50">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -86,7 +86,7 @@ const MetallicButton = ({
           }}
           animate={{ rotate: 360 }}
           transition={{
-            duration: isHovered ? 1.5 : 4,
+            duration: isHovered ? 2.5 : 4,
             ease: "linear",
             repeat: Infinity
           }}
@@ -94,7 +94,7 @@ const MetallicButton = ({
       </div>
 
       {/* Dark Layer */}
-      <div className="absolute inset-0 -m-[8px] rounded-[10px] pointer-events-none z-[1] overflow-hidden">
+      <div className="absolute inset-0 -m-[8px] rounded-[14px] pointer-events-none z-[1] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -103,7 +103,7 @@ const MetallicButton = ({
           }}
           animate={{ rotate: 360 }}
           transition={{
-            duration: isHovered ? 1.5 : 4,
+            duration: isHovered ? 2.5 : 4,
             ease: "linear",
             repeat: Infinity
           }}
@@ -111,7 +111,7 @@ const MetallicButton = ({
       </div>
 
       {/* Bright Layer */}
-      <div className="absolute inset-0 -m-[6px] rounded-[10px] pointer-events-none z-[2] overflow-hidden">
+      <div className="absolute inset-0 -m-[6px] rounded-[14px] pointer-events-none z-[2] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -120,7 +120,7 @@ const MetallicButton = ({
           }}
           animate={{ rotate: 360 }}
           transition={{
-            duration: isHovered ? 1.5 : 4,
+            duration: isHovered ? 2.5 : 4,
             ease: "linear",
             repeat: Infinity
           }}
@@ -128,7 +128,7 @@ const MetallicButton = ({
       </div>
 
       {/* Primary Border */}
-      <div className="absolute inset-0 -m-[2px] rounded-[10px] pointer-events-none z-[3] overflow-hidden">
+      <div className="absolute inset-0 -m-[3px] rounded-[14px] pointer-events-none z-[3] overflow-hidden">
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -137,7 +137,7 @@ const MetallicButton = ({
           }}
           animate={{ rotate: 360 }}
           transition={{
-            duration: isHovered ? 1.5 : 4,
+            duration: isHovered ? 2.5 : 4,
             ease: "linear",
             repeat: Infinity,
             delay: 0.15
@@ -147,23 +147,24 @@ const MetallicButton = ({
 
       {/* Blue Hint */}
       <div
-        className="absolute w-10 h-8 top-2 left-5 z-[4] pointer-events-none transition-opacity duration-400"
+        className="absolute w-10 h-[30px] top-[10px] left-5 z-[4] pointer-events-none transition-opacity duration-400"
         style={{
           background: 'radial-gradient(circle, #025AF8 0%, transparent 70%)',
           filter: 'blur(18px)',
-          opacity: isHovered ? 0.2 : 0.5
+          opacity: isHovered ? 0.3 : 0.6
         }}
       />
 
       {/* Button Content */}
       <motion.span
-        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-xs md:text-sm font-semibold tracking-wider rounded-lg px-6 py-3 md:px-10 md:py-[18px] border"
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-xl px-10 py-[18px]"
         style={{
           background: 'transparent',
-          borderColor: isHovered ? 'rgba(2, 90, 248, 0.6)' : 'rgba(2, 90, 248, 0.4)'
+          border: 'none'
         }}
         whileHover={{
-          scale: 1.02
+          scale: 1.02,
+          boxShadow: '0 0 30px rgba(2, 90, 248, 0.3)'
         }}
         whileTap={{ scale: 0.98 }}
       >
