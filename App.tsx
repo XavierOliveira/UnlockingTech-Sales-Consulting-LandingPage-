@@ -282,7 +282,7 @@ const Features = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
-            <span className="text-[#003099]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">
               Com Tecnologia
             </span>
           </h2>
@@ -290,9 +290,10 @@ const Features = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <FeatureCard
-            icon={Cpu}
-            title="Automação Inteligente"
+          <div className="lg:col-span-2">
+            <FeatureCard 
+              icon={Cpu}
+              title="Automação Inteligente"
               desc="Sistemas que trabalham por ti, 24/7, garantindo eficiência máxima."
               delay={1}
               iconAnimation={{ rotate: 360, transition: { duration: 20, repeat: Infinity, ease: "linear" } }}
@@ -314,8 +315,9 @@ const Features = () => {
                   </motion.div>
                 </>
               }
-          />
-          <FeatureCard
+            />
+          </div>
+          <FeatureCard 
             icon={Zap}
             title={<>Velocidade de <br/> Implementação</>}
             desc="Sincroniza instantaneamente as tuas ferramentas em todos os dispositivos."
@@ -675,7 +677,7 @@ const MidSection = () => {
             >
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
-                  <span className="text-[#003099]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">
                     As Tuas Necessidades
                   </span>
                 </h2>
@@ -830,7 +832,7 @@ const Solutions = () => {
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-             As Nossas <span className="text-[#003099]">Soluções</span>
+             As Nossas <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Soluções</span>
           </h2>
           <p className="text-zinc-400 mt-4 text-lg">Soluções completas para transformar o teu negócio.</p>
         </motion.div>
@@ -924,7 +926,7 @@ const Team = () => {
           className="text-center mb-10"
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            A Nossa <span className="text-[#003099]">Equipa</span>
+            A Nossa <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Equipa</span>
           </h2>
           <p className="text-zinc-400">Especialistas em transformação digital de vendas.</p>
         </motion.div>
@@ -949,7 +951,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Pronto Para <span className="text-[#003099]">Crescer?</span>
+                Pronto Para <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-[#003099] to-[#003099]/40 animate-shimmer bg-[length:200%_100%]">Crescer?</span>
               </h2>
               <p className="text-zinc-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Agenda uma consultoria gratuita de 30 minutos e descobre o potencial da tua empresa.
