@@ -797,42 +797,42 @@ const MidSection = () => {
 
                    <div className="relative mt-8 h-48 md:h-64 w-full">
                       <svg viewBox="0 0 900 360" className="absolute inset-0 w-full h-full" fill="none" preserveAspectRatio="xMidYMid meet">
-                        {/* Light/Zinc strokes for dark mode */}
-                        <path d="M450 300 C 450 200, 300 120, 150 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="600" strokeDashoffset="600" opacity="0.3">
+                        {/* Blue strokes for integration connections */}
+                        <path d="M450 300 C 450 200, 300 120, 150 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="600" strokeDashoffset="600" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="600;0;600" dur="3s" begin="0s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
-                        <path d="M450 300 C 450 210, 360 130, 270 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="520" strokeDashoffset="520" opacity="0.3">
+                        <path d="M450 300 C 450 210, 360 130, 270 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="520" strokeDashoffset="520" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="520;0;520" dur="3s" begin="0.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
-                        <path d="M450 300 C 450 150, 420 80, 390 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="450" strokeDashoffset="450" opacity="0.3">
+                        <path d="M450 300 C 450 150, 420 80, 390 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="450" strokeDashoffset="450" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="450;0;450" dur="3s" begin="0.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
-                        <path d="M450 300 C 450 150, 480 80, 510 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="450" strokeDashoffset="450" opacity="0.3">
+                        <path d="M450 300 C 450 150, 480 80, 510 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="450" strokeDashoffset="450" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="450;0;450" dur="3s" begin="0.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
-                        <path d="M450 300 C 450 210, 540 130, 630 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="520" strokeDashoffset="520" opacity="0.3">
+                        <path d="M450 300 C 450 210, 540 130, 630 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="520" strokeDashoffset="520" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="520;0;520" dur="3s" begin="0.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
-                        <path d="M450 300 C 450 200, 600 120, 750 30" stroke="#e4e4e7" strokeWidth="2" strokeLinecap="round" strokeDasharray="600" strokeDashoffset="600" opacity="0.3">
+                        <path d="M450 300 C 450 200, 600 120, 750 30" stroke="#025AF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="600" strokeDashoffset="600" opacity="0.5">
                           <animate attributeName="stroke-dashoffset" values="600;0;600" dur="3s" begin="1s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1" />
                         </path>
 
-                        <circle cx="150" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="150" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
                         </circle>
-                        <circle cx="270" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="270" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.2s" repeatCount="indefinite" />
                         </circle>
-                        <circle cx="390" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="390" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.4s" repeatCount="indefinite" />
                         </circle>
-                        <circle cx="510" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="510" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.6s" repeatCount="indefinite" />
                         </circle>
-                        <circle cx="630" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="630" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="0.8s" repeatCount="indefinite" />
                         </circle>
-                        <circle cx="750" cy="30" r="4" fill="#e4e4e7">
+                        <circle cx="750" cy="30" r="4" fill="#025AF8">
                           <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" begin="1s" repeatCount="indefinite" />
                         </circle>
                       </svg>
