@@ -77,7 +77,11 @@ const MetallicButton = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Dark Layer */}
-      <div className="absolute inset-0 -m-[7px] rounded-[12px] pointer-events-none z-[1] overflow-hidden">
+      <motion.div
+        className="absolute inset-0 -m-[7px] rounded-[12px] pointer-events-none z-[1] overflow-hidden"
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -91,10 +95,14 @@ const MetallicButton = ({
             repeat: Infinity
           }}
         />
-      </div>
+      </motion.div>
 
       {/* Bright Layer */}
-      <div className="absolute inset-0 -m-[4px] rounded-[12px] pointer-events-none z-[2] overflow-hidden">
+      <motion.div
+        className="absolute inset-0 -m-[4px] rounded-[12px] pointer-events-none z-[2] overflow-hidden"
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -108,10 +116,14 @@ const MetallicButton = ({
             repeat: Infinity
           }}
         />
-      </div>
+      </motion.div>
 
       {/* Primary Border */}
-      <div className="absolute inset-0 -m-[2px] rounded-[12px] pointer-events-none z-[3] overflow-hidden">
+      <motion.div
+        className="absolute inset-0 -m-[2px] rounded-[12px] pointer-events-none z-[3] overflow-hidden"
+        animate={{ opacity: isHovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <motion.div
           className="absolute w-[200%] h-[200%] -top-1/2 -left-1/2"
           style={{
@@ -126,7 +138,7 @@ const MetallicButton = ({
             delay: 0.15
           }}
         />
-      </div>
+      </motion.div>
 
       {/* Blue Hint */}
       <div
@@ -205,7 +217,7 @@ const Counter = ({ value, duration = 2.5 }: { value: number, duration?: number }
     }
   }, [inView, value, duration]);
 
-  return <div ref={ref} className="text-5xl font-bold text-white mb-2 tabular-nums">0.0%</div>;
+  return <div ref={ref} className="text-5xl font-bold bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent mb-2 tabular-nums">0.0%</div>;
 };
 
 const Hero = () => {
@@ -356,7 +368,7 @@ const Features = () => {
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
-            <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">
+            <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">
               Com Tecnologia
             </span>
           </h2>
@@ -749,7 +761,7 @@ const MidSection = () => {
             >
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
-                  <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">
+                  <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">
                     As Tuas Necessidades
                   </span>
                 </h2>
@@ -910,7 +922,7 @@ const Solutions = () => {
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-             As Nossas <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Soluções</span>
+             As Nossas <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Soluções</span>
           </h2>
           <p className="text-zinc-400 mt-4 text-lg">Soluções completas para transformar o teu negócio.</p>
         </motion.div>
@@ -1004,7 +1016,7 @@ const Team = () => {
           className="text-center mb-10"
         >
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-            A Nossa <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Equipa</span>
+            A Nossa <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Equipa</span>
           </h2>
           <p className="text-zinc-400">Especialistas em transformação digital de vendas.</p>
         </motion.div>
@@ -1029,7 +1041,7 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Pronto Para <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(2,90,248,0.8)]">Crescer?</span>
+                Pronto Para <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Crescer?</span>
               </h2>
               <p className="text-zinc-500 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                 Agenda uma consultoria gratuita de 30 minutos e descobre o potencial da tua empresa.
