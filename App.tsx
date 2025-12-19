@@ -160,18 +160,22 @@ const MetallicButton = ({
 
       {/* Button Content */}
       <motion.span
-        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-[10px] px-10 py-[18px]"
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-[10px] px-10 py-[18px] overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #010201 0%, #0a0509 100%)',
-          border: 'none'
+          background: 'linear-gradient(135deg, #1a1a1f 0%, #0f0f14 50%, #1a1a1f 100%)',
+          border: 'none',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.1), inset 0 -1px 0 rgba(0,0,0,0.5)'
         }}
         whileHover={{
           scale: 1.02,
-          boxShadow: '0 0 20px rgba(2, 90, 248, 0.2)'
+          boxShadow: '0 0 20px rgba(2, 90, 248, 0.2), inset 0 1px 0 rgba(255,255,255,0.15), inset 0 -1px 0 rgba(0,0,0,0.5)'
         }}
         whileTap={{ scale: 0.98 }}
       >
-        {children}
+        {/* Metallic shine overlay */}
+        <span className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent pointer-events-none"></span>
+
+        <span className="relative z-10">{children}</span>
       </motion.span>
     </div>
   );
