@@ -1231,7 +1231,7 @@ const App = () => {
             <a href="#servicos" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Serviços</a>
             <a href="#solucoes" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Soluções</a>
             <a href="#equipa" className="text-sm font-medium text-zinc-400 transition-colors hover:text-white">Equipa</a>
-            <div className="scale-[0.85] origin-right">
+            <div className="scale-[0.75] origin-right">
               <MetallicButton href="https://meetings-eu1.hubspot.com/miguel-marques?uuid=1fc2b9c6-f251-49b4-b6a5-fa9c1618af27">Fale Connosco</MetallicButton>
             </div>
           </div>
