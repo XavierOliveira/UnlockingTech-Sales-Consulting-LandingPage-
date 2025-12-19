@@ -367,8 +367,8 @@ const Features = () => {
           className="text-center mb-16 max-w-4xl mx-auto"
         >
           {/* Decorative line with gradient */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+          <div className="flex items-center justify-center gap-3 mb-8 w-full">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent flex-1 max-w-2xl"></div>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
@@ -765,8 +765,8 @@ const MidSection = () => {
               className="text-left"
             >
                 {/* Decorative line with gradient */}
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent w-32"></div>
+                <div className="flex items-center gap-3 mb-8 w-full">
+                  <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent flex-1"></div>
                 </div>
 
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
@@ -933,8 +933,8 @@ const Solutions = () => {
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
 
           {/* Decorative line with gradient */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent w-32"></div>
+          <div className="flex items-center gap-3 mb-8 w-full">
+            <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent flex-1 max-w-3xl"></div>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
@@ -1032,8 +1032,8 @@ const Team = () => {
           className="text-center mb-10"
         >
           {/* Decorative line with gradient */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+          <div className="flex items-center justify-center gap-3 mb-8 w-full max-w-2xl mx-auto">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent flex-1"></div>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
@@ -1062,8 +1062,8 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
             >
               {/* Decorative line with gradient */}
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+              <div className="flex items-center justify-center gap-3 mb-8 w-full max-w-2xl mx-auto">
+                <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent flex-1"></div>
               </div>
 
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
