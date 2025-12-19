@@ -160,7 +160,7 @@ const MetallicButton = ({
 
       {/* Button Content */}
       <motion.span
-        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-[10px] px-10 py-[18px] overflow-hidden"
+        className="relative z-[5] flex items-center justify-center gap-2 uppercase transition-all duration-300 text-white text-lg md:text-lg font-semibold rounded-[10px] px-10 py-3 md:py-4 overflow-hidden whitespace-nowrap"
         style={{
           background: 'linear-gradient(135deg, #1a1a1f 0%, #0f0f14 50%, #1a1a1f 100%)',
           border: 'none',
@@ -175,7 +175,7 @@ const MetallicButton = ({
         {/* Metallic shine overlay */}
         <span className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent pointer-events-none"></span>
 
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 flex items-center gap-2">{children}</span>
       </motion.span>
     </div>
   );
