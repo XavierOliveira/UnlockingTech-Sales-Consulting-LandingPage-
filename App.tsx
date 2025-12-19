@@ -366,6 +366,11 @@ const Features = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-4xl mx-auto"
         >
+          {/* Decorative line with gradient */}
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+          </div>
+
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             Pensamento Estratégico <br/>
             <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">
@@ -759,6 +764,11 @@ const MidSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-left"
             >
+                {/* Decorative line with gradient */}
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent w-32"></div>
+                </div>
+
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                   Um Lugar Para Todas <br/>
                   <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">
@@ -921,6 +931,12 @@ const Solutions = () => {
           className="mb-16"
         >
           <span className="text-sm font-bold text-zinc-500 tracking-widest uppercase mb-2 block">SOLUÇÕES</span>
+
+          {/* Decorative line with gradient */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-px bg-gradient-to-r from-[#025AF8] to-transparent w-32"></div>
+          </div>
+
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
              As Nossas <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Soluções</span>
           </h2>
@@ -1015,6 +1031,11 @@ const Team = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
+          {/* Decorative line with gradient */}
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+          </div>
+
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
             A Nossa <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Equipa</span>
           </h2>
@@ -1040,6 +1061,11 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              {/* Decorative line with gradient */}
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="h-px bg-gradient-to-r from-transparent via-[#025AF8] to-transparent w-32"></div>
+              </div>
+
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
                 Pronto Para <span className="bg-gradient-to-r from-[#6BA3FF] via-[#025AF8] to-[#003099] bg-clip-text text-transparent">Crescer?</span>
               </h2>
